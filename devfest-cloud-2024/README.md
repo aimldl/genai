@@ -15,4 +15,4 @@
 # Custome demo video
 [Find a way to DevFest Cloud 2024](https://youtu.be/NK3uOWT4rW4) [4:09]
 
-[![YouTube video player](http://img.youtube.com/vi/0/0.jpg)](https://www.youtube.com/embed/NK3uOWT4rW4?si=4RtBzlB4q2PrrJJk)
+[![YouTube video player](http://img.youtube.com/vi/NK3uOWT4rW4/default.jpg)](https://www.youtube.com/embed/NK3uOWT4rW4?si=4RtBzlB4q2PrrJJk)
