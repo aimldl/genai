@@ -4,6 +4,7 @@
 
 
 ## Beyond Text: Exploring Multimodality of Gemini
+- Slides: [Beyond Text_ Exploring Multimodality of Gemini (released).pdf](https://github.com/aimldl/genai/blob/main/devfest-cloud-2024/Beyond%20Text_%20Exploring%20Multimodality%20of%20Gemini%20(released).pdf)
 
 ### Agenda
 - Gemini 1.5 Pro: 멀티모달 생성형AI의 새로운 지평
