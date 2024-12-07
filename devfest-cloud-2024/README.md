@@ -15,8 +15,8 @@
 - 결론
 
 ### Custom demo video
-To download the file, click [find-a-way-to-devfest-cloud-2024.mov](https://drive.google.com/file/d/1p_nyPF87y_TOw7z4261OqqQwdEzjC93t/view?usp=drive_link).
-
+- To download the file, click [find-a-way-to-devfest-cloud-2024.mov](https://drive.google.com/file/d/1p_nyPF87y_TOw7z4261OqqQwdEzjC93t/view?usp=drive_link).
+- To watch the video uploaded on Youtube, click:
 [![YouTube video player](http://img.youtube.com/vi/NK3uOWT4rW4/hqdefault.jpg)](https://www.youtube.com/embed/NK3uOWT4rW4?si=4RtBzlB4q2PrrJJk)
 
 [Find a way to DevFest Cloud 2024](https://youtu.be/NK3uOWT4rW4) [4:09] was used for [Vertex AI Gemini 1.5 Pro 활용 가이드.ipynb](https://github.com/aimldl/genai/blob/main/devfest-cloud-2024/Vertex%20AI%20Gemini%201_5%20Pro%20%ED%99%9C%EC%9A%A9%20%EA%B0%80%EC%9D%B4%EB%93%9C.ipynb) to demonstrate the multimodal nature of Gemini 1.5 Pro. 
