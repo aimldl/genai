@@ -13,8 +13,8 @@
 - 저자: 김수민, 백선환
 - [책 구매 링크](https://product.kyobobook.co.kr/detail/S000201225687)
 - [eBook 미리보기](https://ebook-product.kyobobook.co.kr/dig/preview/E000005197986)
-<img src="images/교보문고-국내도서-챗GPT 거대한 전환.png">
+<img src="images/교보문고-챗GPT 거대한 전환.png">
 
 <img src="images/교보문고-챗GPT 거대한 전환-북커버.png">
 
-<img src="images/교보문고-국내도서-챗GPT 거대한 전환-추천사-김태형.png">
+<img src="images/교보문고-챗GPT 거대한 전환-추천사-김태형.png">
