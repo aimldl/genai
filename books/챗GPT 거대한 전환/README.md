@@ -7,7 +7,7 @@
 이 책은 AI/ML 전문가가 아닌 기술인력과 비기술인력 모두에게 추천할 수 있으며, 대규모 언어 모델 분야에서 챗GPT가 발생시킨 혁신과 변화를 포괄하여 일반 대중의 이해도를 높이는 데 좋은 자료가 될 것입니다. 또한, AI/ML과 자연어 처리 분야에 종사하시는 분들에게도 기술 외적인 유용한 정보를 제공합니다. "챗GPT 쇼크"는 인공지능 분야의 세부분야 중 하나인 대규모 언어 모델 분야에서 일어나는 혁신적인 변화에 대한 지식을 배우는 데 큰 도움을 줄 것입니다.
 
 ## 교보문고
-[책 링크](https://product.kyobobook.co.kr/detail/S000201225687)
+[책 구매 링크](https://product.kyobobook.co.kr/detail/S000201225687) [eBook 미리보기](https://ebook-product.kyobobook.co.kr/dig/preview/E000005197986)
 <img src="images/교보문고-국내도서-챗GPT 거대한 전환.png">
 
 <img src="images/교보문고-챗GPT 거대한 전환-북커버.png">
