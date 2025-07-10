@@ -1,0 +1,166 @@
+03-15 10:00:00.123 1234-1234/MainActivity: I/AppLifecycle: Application started. onCreate() called.
+03-15 10:00:00.345 1234-1234/MyApplication: D/DependencyGraph: Injecting UserRepository and NetworkService.
+03-15 10:00:01.001 1234-1234/LoginViewModel: I/UserLogin: User 'john.doe' attempting login...
+03-15 10:00:01.050 1234-1239/NetworkService: D/HttpClient: Initiating POST request to https://api.example.com/auth
+03-15 10:00:02.110 1234-1239/NetworkService: W/HttpClient: API response took longer than expected: 1060ms.
+03-15 10:00:02.150 1234-1239/NetworkService: E/HttpClient: Failed to connect to server: Connection refused.
+03-15 10:00:02.151 1234-1239/NetworkService: E/NetworkError: Failed to authenticate user. Server not reachable.
+    java.net.ConnectException: Connection refused: no further information
+        at java.base/sun.nio.ch.Net.connect0(Native Method)
+        at java.base/sun.nio.ch.Net.connect(Net.java:574)
+        at java.base/sun.nio.ch.Net.connect(Net.java:563)
+        at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:232)
+        at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:157)
+        at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
+        at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:109)
+        at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:89)
+        at okhttp3.internal.connection.RealCall.initExchange(RealCall.java:249)
+        at okhttp3.internal.connection.RealCall.lambda$execute$0(RealCall.java:227)
+        at okhttp3.internal.connection.RealCall$$ExternalSyntheticLambda0.run(Unknown Source:2)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+        at java.lang.Thread.run(Thread.java:920)
+03-15 10:00:02.200 1234-1234/LoginViewModel: W/UserLogin: Login failed due to network issues. Displaying error to user.
+03-15 10:00:03.010 1234-1234/DashboardFragment: I/UIUpdate: Attempting to load user profile picture.
+03-15 10:00:03.150 1234-1234/ImageLoader: E/ResourceLoad: Could not load image from URL: https://api.example.com/profile_pics/user_id_123.jpg. File not found.
+    android.content.res.Resources$NotFoundException: Resource not found: https://api.example.com/profile_pics/user_id_123.jpg
+        at com.example.myapp.ImageLoader.loadImage(ImageLoader.java:75)
+        at com.example.myapp.DashboardFragment.loadProfileData(DashboardFragment.java:180)
+        at com.example.myapp.DashboardFragment.onViewCreated(DashboardFragment.java:92)
+        at androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3104)
+        at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:547)
+        at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:282)
+        at androidx.fragment.app.FragmentStateManager.restoreState(FragmentStateManager.java:1400)
+        at androidx.fragment.app.FragmentManager.restoreAllState(FragmentManager.java:3190)
+        at androidx.fragment.app.FragmentController.restoreAllState(FragmentController.java:160)
+        at androidx.fragment.app.FragmentActivity.onRestoreInstanceState(FragmentActivity.java:439)
+        at androidx.activity.ComponentActivity.onRestoreInstanceState(ComponentActivity.java:406)
+        at android.app.Activity.performRestoreInstanceState(Activity.java:1427)
+        at android.app.Activity.performCreate(Activity.java:7979)
+        at android.app.Activity.performCreate(Activity.java:7968)
+        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1309)
+        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3422)
+        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3601)
+        at android.app.server.SystemServer.run(SystemServer.java:825)
+        at android.os.Handler.dispatchMessage(Handler.java:103)
+        at android.os.Looper.loop(Looper.java:214)
+        at android.app.ActivityThread.main(ActivityThread.java:7682)
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:516)
+        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:950)
+03-15 10:00:03.200 1234-1234/DashboardFragment: W/UIUpdate: Placeholder image set for profile picture.
+03-15 10:00:04.500 1234-1234/MyDatabaseHelper: I/Database: Initializing database schema version 5.
+03-15 10:00:04.600 1234-1240/MyDatabaseHelper: W/Database: Attempting to insert new record while another transaction is active. This might cause a lock.
+03-15 10:00:04.750 1234-1240/MyDatabaseHelper: E/DatabaseError: Failed to insert user preferences. Database is locked.
+    android.database.sqlite.SQLiteDatabaseLockedException: database is locked (code 5)
+        at android.database.sqlite.SQLiteConnection.nativeExecuteForLastRowId(Native Method)
+        at android.database.sqlite.SQLiteConnection.executeForLastRowId(SQLiteConnection.java:783)
+        at android.database.sqlite.SQLiteSession.executeForLastRowId(SQLiteSession.java:790)
+        at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:119)
+        at com.example.myapp.MyDatabaseHelper.insertUserPreferences(MyDatabaseHelper.java:210)
+        at com.example.myapp.SettingsViewModel.saveSettings(SettingsViewModel.java:95)
+        at com.example.myapp.SettingsActivity.lambda$onCreate$0(SettingsActivity.java:120)
+        at com.example.myapp.SettingsActivity$$ExternalSyntheticLambda0.onClick(Unknown Source:2)
+        at android.view.View.performClick(View.java:7471)
+        at android.view.View.performClickInternal(View.java:7448)
+        at android.view.View.access$3600(View.java:840)
+        at android.view.View$PerformClick.run(View.java:28723)
+        at android.os.Handler.handleCallback(Handler.java:938)
+        at android.os.Handler.dispatchMessage(Handler.java:99)
+        at android.os.Looper.loop(Looper.java:214)
+        at android.app.ActivityThread.main(ActivityThread.java:7682)
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:516)
+        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:950)
+03-15 10:00:04.800 1234-1234/SettingsActivity: W/DataSave: Failed to save user settings. Please try again.
+03-15 10:00:05.100 1234-1234/LocationTracker: D/GPS: Requesting last known location.
+03-15 10:00:05.250 1234-1234/LocationTracker: W/Permission: Location permission (ACCESS_FINE_LOCATION) not granted.
+03-15 10:00:05.251 1234-1234/LocationTracker: E/Security: Could not get location updates. Missing required permission.
+    java.lang.SecurityException: "gps" location provider requires ACCESS_FINE_LOCATION permission.
+        at android.os.Parcel.createExceptionOrNull(Parcel.java:2426)
+        at android.os.Parcel.createException(Parcel.java:2410)
+        at android.os.Parcel.readException(Parcel.java:2393)
+        at android.os.Parcel.readException(Parcel.java:2335)
+        at android.location.ILocationManager$Stub$Proxy.requestLocationUpdates(ILocationManager.java:1016)
+        at android.location.LocationManager.requestLocationUpdates(LocationManager.java:1326)
+        at com.example.myapp.LocationTracker.startLocationUpdates(LocationTracker.java:35)
+        at com.example.myapp.MapFragment.onResume(MapFragment.java:80)
+        at androidx.fragment.app.Fragment.performResume(Fragment.java:3199)
+        at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:330)
+        at androidx.fragment.app.FragmentStateManager.restoreState(FragmentStateManager.java:1400)
+        at androidx.fragment.app.FragmentManager.restoreAllState(FragmentManager.java:3190)
+        at androidx.fragment.app.FragmentController.restoreAllState(FragmentController.java:160)
+        at androidx.fragment.app.FragmentActivity.onRestoreInstanceState(FragmentActivity.java:439)
+        at androidx.activity.ComponentActivity.onRestoreInstanceState(ComponentActivity.java:406)
+        at android.app.Activity.performRestoreInstanceState(Activity.java:1427)
+        at android.app.Activity.performCreate(Activity.java:7979)
+        at android.app.Activity.performCreate(Activity.java:7968)
+        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1309)
+        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3422)
+        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3601)
+        at android.app.server.SystemServer.run(SystemServer.java:825)
+        at android.os.Handler.dispatchMessage(Handler.java:103)
+        at android.os.Looper.loop(Looper.java:214)
+        at android.app.ActivityThread.main(ActivityThread.java:7682)
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:516)
+        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:950)
+03-15 10:00:05.300 1234-1234/MapFragment: W/MapDisplay: Default location displayed due to permission issue.
+03-15 10:00:06.000 1234-1234/MainActivity: D/UserAction: User clicked 'Submit Feedback' button.
+03-15 10:00:06.100 1234-1234/FeedbackViewModel: I/Feedback: Processing feedback submission.
+03-15 10:00:06.200 1234-1241/FeedbackSender: D/API_Call: Preparing feedback data for API.
+03-15 10:00:06.300 1234-1241/FeedbackSender: W/DataValidation: Feedback message is empty, but form allows it.
+03-15 10:00:06.400 1234-1241/FeedbackSender: E/API_Error: Received HTTP 500 Internal Server Error from feedback API.
+    okhttp3.internal.http2.StreamResetException: stream was reset: CANCEL
+        at okhttp3.internal.http2.Http2Stream.checkNotReset(Http2Stream.java:125)
+        at okhttp3.internal.http2.Http2Stream.takeHeaders(Http2Stream.java:105)
+        at okhttp3.internal.http2.Http2Codec.readResponseHeaders(Http2Codec.java:119)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:105)
+        at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:105)
+        at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:54)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:105)
+        at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:76)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:105)
+        at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+        at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:105)
+        at okhttp3.internal.http.RealCall.getResponseWithInterceptorChain(RealCall.java:232)
+        at okhttp3.internal.http.RealCall.lambda$execute$0(RealCall.java:204)
+        at okhttp3.internal.http.RealCall$$ExternalSyntheticLambda0.run(Unknown Source:2)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+        at java.lang.Thread.run(Thread.java:920)
+03-15 10:00:06.450 1234-1234/FeedbackViewModel: W/Feedback: Feedback submission failed. Showing generic error.
+03-15 10:00:07.000 1234-1234/ProfileView: I/UI: Attempting to render complex user profile.
+03-15 10:00:07.100 1234-1234/ProfileView: E/NPE: NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+    java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setText(java.lang.CharSequence)' on a null object reference
+        at com.example.myapp.ProfileView.updateProfile(ProfileView.java:150)
+        at com.example.myapp.ProfileFragment.onViewCreated(ProfileFragment.java:80)
+        at androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3104)
+        at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:547)
+        at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:282)
+        at androidx.fragment.app.FragmentStateManager.restoreState(FragmentStateManager.java:1400)
+        at androidx.fragment.app.FragmentManager.restoreAllState(FragmentManager.java:3190)
+        at androidx.fragment.app.FragmentController.restoreAllState(FragmentController.java:160)
+        at androidx.fragment.app.FragmentActivity.onRestoreInstanceState(FragmentActivity.java:439)
+        at androidx.activity.ComponentActivity.onRestoreInstanceState(ComponentActivity.java:406)
+        at android.app.Activity.performRestoreInstanceState(Activity.java:1427)
+        at android.app.Activity.performCreate(Activity.java:7979)
+        at android.app.Activity.performCreate(Activity.java:7968)
+        at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1309)
+        at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:3422)
+        at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3601)
+        at android.app.server.SystemServer.run(SystemServer.java:825)
+        at android.os.Handler.dispatchMessage(Handler.java:103)
+        at android.os.Looper.loop(Looper.java:214)
+        at android.app.ActivityThread.main(ActivityThread.java:7682)
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:516)
+        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:950)
+03-15 10:00:07.150 1234-1234/ProfileFragment: W/UI_State: Partial profile loaded. Missing some data fields.
+03-15 10:00:08.000 1234-1234/MainActivity: I/AppLifecycle: User navigated to Home screen.
+03-15 10:00:08.500 1234-1234/ActivityManager: W/ActivityManager: Background partial concurrent mark sweep GC freed 45678(2MB) objects, 123(2MB) refs in 234ms
+03-15 10:00:09.000 1234-1234/MainActivity: I/AppLifecycle: onPause() called.
+03-15 10:00:09.100 1234-1234/BatteryOptimisation: W/Battery: App running in background, consider optimising network requests.
+03-15 10:00:09.500 1234-1234/MyBroadcastReceiver: D/SystemEvent: Received CONNECTIVITY_ACTION broadcast. Network state changed.
+03-15 10:00:10.000 1234-1234/MainActivity: I/AppLifecycle: onDestroy() called. Application shutting down.
